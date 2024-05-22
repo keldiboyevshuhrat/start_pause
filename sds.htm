@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>bir</title>
+    <link rel="icon" href="1">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            background-color: rgb(52, 56, 51);
+        }
+
+        .div {
+            width: 300px;
+            height: 250px;
+            border: 0px solid black;
+            margin: auto;
+            padding-top: 100px;
+
+        }
+
+        .yozuvdiv {
+            width: 100%;
+            height: 50px;
+            border: 0px solid black;
+            text-align: center;
+
+
+
+
+            >h1 {
+                font-size: 35px;
+                font-weight: 900;
+                font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+                color: black;
+                font-weight: 800;
+                text-shadow: 3px 3px 5px black;
+            }
+
+
+
+        }
+
+        .paragref {
+            width: 60px;
+            height: 60px;
+            border: 0px solid black;
+            margin: auto;
+            font-size: 30px;
+
+            >p {
+                margin-top: 10px;
+                text-align: center;
+                font-weight: 600;
+                font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+                text-shadow: 3px 3px 5px black;
+
+            }
+
+
+        }
+
+        .div2 {
+            width: 170px;
+            height: 80px;
+            border: 0px solid black;
+            margin: auto;
+            display: flex;
+            justify-content: space-between;
+            padding-top: 20px;
+
+            >.button1 {
+                width: 60px;
+                height: 60px;
+                background-color: rgb(37, 41, 37);
+                border-radius: 100%;
+                font-size: 24px;
+                border-width: 0px;
+                box-shadow: 6px 6px 10px black;
+
+
+            }
+
+
+
+
+
+            >.button2 {
+                width: 60px;
+                height: 60px;
+                background-color: rgb(37, 41, 37);
+                border-radius: 100%;
+                border-width: 0px;
+                box-shadow: 6px 6px 10px black;
+                font-size: 18px;
+                font-weight: 700;
+
+
+
+            }
+
+
+
+
+
+
+
+        }
+
+        .text {
+            width: 400px;
+            height: 10px;
+            background-color: rgba(205, 206, 206, 0);
+            margin-left: -50px;
+            animation-name: sss;
+            animation-duration: 1s;
+            border-radius: 30px;
+        }
+
+        .text {
+            width: 400px;
+            height: 10px;
+            background-color: rgba(205, 206, 206, 0);
+            margin-left: -50px;
+            animation-name: sss;
+            animation-duration: 1s;
+            border-radius: 30px;
+        }
+
+
+        @keyframes sss {
+            0% {
+                width: 0%;
+                background-color: black;
+            }
+
+
+            100% {
+                width: 400px;
+                background-color: rgba(0, 0, 0, 0);
+            }
+
+        }
+    </style>
+
+
+</head>
+
+<body>
+
+
+
+
+
+    <div class="div">
+        <div class="text">
+        </div>
+        <div class="yozuvdiv">
+            <h1 id="h1">start</h1>
+        </div>
+        <div class="paragref">
+            <p id="paragref">0 </p>
+        </div>
+
+
+
+
+        <div class="div2">
+
+            <button id="button1" class="button1">start </button>
+            <button id="button2" class="button2">pouse</button>
+        </div>
+
+
+
+
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <script>
+        let text = document.querySelector(".text")
+
+
+        // start va pouse secundt ni tepasida
+        let h1 = document.querySelector("#h1");
+
+        // secund
+        let paragref = document.querySelector("#paragref");
+
+        // button start
+        let button1 = document.querySelector("#button1");
+
+
+        //button pause 
+        let button2 = document.querySelector("#button2");
+
+        let body = document.querySelector("body");
+
+
+        button1.addEventListener("click", () => {
+
+
+            button1.style = `
+            box-shadow: 6px 6px 10px black inset;
+            font-size: 18px;
+
+            
+            `
+            // body.style.background = 'green'
+
+
+            button2.style = `
+            box-shadow: 6px 6px 10px black ;
+        
+            
+            `
+
+
+
+
+
+            let aa = paragref.textContent
+
+            let a = setInterval(() => {
+
+                h1.textContent = "start"
+
+
+
+                aa++
+
+                paragref.textContent = aa
+                console.log(aa);
+
+            }, 1000)
+
+
+
+
+            let bbb = button2.addEventListener("click", () => {
+                h1.textContent = "pause"
+                let valuee = aa.value
+                paragref.textContent
+
+                clearInterval(a)
+
+
+
+                button1.style = `
+            box-shadow: 6px 6px 10px black ;
+        
+            
+            `
+                // body.style.background = 'red'
+
+
+                button2.style = `
+            box-shadow: 6px 6px 10px black inset;
+            font-size: 14px;
+        
+            
+            `
+
+
+
+            })
+
+
+
+
+        })
+
+
+
+
+
+
+
+
+
+
+    </script>
+
+
+</body>
+
+</html>
